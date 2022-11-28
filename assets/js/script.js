@@ -16,3 +16,4 @@ IF user clicks save your pairing
 
 CLICK user clicks previous pairings
     THEN user is directed to the list on the local storage  
+    
