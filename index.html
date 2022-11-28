@@ -7,9 +7,45 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/skeleton.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Wine and dine finderrz | Home</title>
+    <title>Wine and Dine Finderrz | Home</title>
 </head>
+
 <body>
-    
+
+    <header><h1>Wine and Dine Finderrz</h1></header>
+
+    <div class="row">
+        <!-- using skeleton divide DIV into halves -->
+        <div class="one-half column">
+            <p>Choose your favorite type of cuisine and base alcohol to create a cocktail and dinner recipe to pair together</p>
+            <p class="input-title">Cuisine: <input class="input" type="text" placeholder="e.g., Italian, Russian, American"></p>
+            <!-- taking user input for what kind of cuisine is wanted -->
+            <p class="input-title">Alcohol: <input class="input" type="text" placeholder="e.g., Gin, Vodka, Whiskey"></p>
+            <!-- taking input from user for wanted alcohol pairing -->
+            <button class="green-btn" type="submit">Submit</button>
+            <div><button class="hide" type="submit">Generate New Pairing</button></div>
+            <!-- hiding button for generating new pairing until user uses Sumbit at least once -->
+            <button class="hide" type="submit">💾 Save Your Pairing</button>
+            <!-- button to save pairing to list // also hides button until user Submits -->
+        </div>
+        <div class="one-half column">
+            <p>Food</p>
+            <!-- display chosen food selected from API -->
+            <p>Drink</p>
+            <!-- display chosen drink selected from API -->
+        </div>
+    </div>
+
+    <!-- separate div to show saved list of saved pairings -->
+    <div id="saved-pairing" class="row">
+        <div class="one-half column">Saved Pairing: <!--Make BOLD -->
+            <p>Food: </p>
+        </div> 
+        <div class="one-half column"> 
+            <p>Drink:   </p>
+        </div>
+    </div>
+
 </body>
+
 </html>
