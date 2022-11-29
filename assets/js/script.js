@@ -22,14 +22,14 @@ var drinkApiURL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
 var nationChoice;
 var drinkChoice;
 var queryURL;
-    
 
+var searchForm = document.querySelector('#search-food-drink');  
 
 function getNationChoice(choice) { //takes user input and returns the URL for the chosen food
   nationChoice = choice;
   queryURL = foodApiURL + nationChoice;
   return queryURL;
-}//end getNationChoice
+}//end getNationChoice 
 
 function getDrink(choice) { //takes user input and returns the URL for the chosen drink
   drinkChoice = choice;
@@ -41,7 +41,7 @@ function getNation(data) {
 
 }//end getNation
 
-function getPairing(data) { //uses math.random to randomly retrieve a pairing based on the selected alcohol and nation
+function getPairingDrink(data) { //uses math.random to randomly retrieve a pairing based on the selected alcohol and nation
 
   console.log(data.drinks.length);
   var pairing = Math.floor(Math.random() * data.drinks.length);
@@ -49,29 +49,45 @@ function getPairing(data) { //uses math.random to randomly retrieve a pairing ba
   console.log(data.drinks[pairing].strDrink);
 }//end getPairing
 
-fetch(getNationChoice('Canadian')) //food by nation api
+function getPairingFood(data) { //uses math.random to randomly retrieve a pairing based on the selected alcohol and nation
+
+  console.log(data.meals.length);
+  var pairing = Math.floor(Math.random() * data.meals.length);
+  console.log(pairing);
+  console.log(data.meals[pairing].strMeal);
+}//end getPairing
+
+
+
+fetch(getNationChoice('American')) //food by nation api
 .then(function (res) {
   return res.json();
 })
 .then(function (data) {
   console.log(data);
+  console.log(data.meals.length);
+    getPairingFood(data);
 })
 .catch(function(err) {
   return(err);
 });
 
-
-fetch(getDrink('Vodka')) //cocktail by drink choice api
+fetch(getDrink('Gin')) //cocktail by drink choice api
   .then(function (res) {
     return res.json();
   })
   .then(function (data) {
     console.log(data);
     console.log(data.drinks.length);
-    getPairing(data);
+    getPairingDrink(data);
   })
   .catch(function (err) {
     return (err);
   });
 
+
   
+
+  searchForm.addEventListener('submit', getNationChoice);
+  searchForm.addEventListener('submit', getDrink);
+
