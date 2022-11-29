@@ -114,9 +114,9 @@ header {
     text-align: center;
 }
 
-/* .hide {
+.hide {
     display:none;
-} */
+}
 
 
 /* hides the overflow from the main user input area */
@@ -124,10 +124,6 @@ header {
     overflow: hidden;
     width: 444px;
     padding-left: 20px;
-}
-
-.drink {
-    
 }
 
 
