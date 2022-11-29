@@ -54,10 +54,6 @@ header {
     margin-bottom: 90px;
 }
 
-h5 {
-    text-align: center;
-}
-
 /* grabs submit button for styling */
 .green-btn {
     background-color: var(--green);  
