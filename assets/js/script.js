@@ -64,7 +64,7 @@ var handleFormSubmit = function(event) { //pressing the submit button will run t
   console.log(drinkChoice);
   fetchData(getNationChoice(nationChoice), getDrink(drinkChoice));
   console.log("handleFormSubmit complete")
-  document.getItem
+
 }
 
 
@@ -76,7 +76,12 @@ fetch(nation) //food by nation api
   return res.json();
 })
 .then(function (data) {
+  console.log(data);
+  if(data.meals == null) {
+    console.log("Error: incorrect meal input");
+  }else {
     getPairingFood(data);
+  }
 })
 .catch(function(err) {
   return(err);
@@ -87,6 +92,7 @@ fetch(base) //cocktail by drink choice api
     return res.json();
   })
   .then(function (data) {
+    console.log(data);
     getPairingDrink(data);
   })
   .catch(function (err) {
