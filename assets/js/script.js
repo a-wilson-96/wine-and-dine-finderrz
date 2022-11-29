@@ -57,6 +57,8 @@ function getPairingFood(data) { //uses math.random to randomly retrieve a pairin
   console.log(data.meals[pairing].strMeal);
 }//end getPairing
 
+
+
 fetch(getNationChoice('American')) //food by nation api
 .then(function (res) {
   return res.json();
