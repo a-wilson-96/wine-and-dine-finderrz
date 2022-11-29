@@ -24,16 +24,20 @@
     <div class="row">
         <!-- using skeleton divide DIV into halves -->
         <div class="one-third column main">
-            <p>Choose your favorite type of cuisine and base alcohol to create a cocktail and dinner recipe to pair together</p>
-            <p class="input-title"><input class="input" type="text" placeholder="Cuisine: e.g., Italian, Russian, American"></p>
-            <!-- taking user input for what kind of cuisine is wanted -->
-            <p class="input-title"><input class="input" type="text" placeholder="Alcohol: e.g., Gin, Vodka, Whiskey"></p>
-            <!-- taking input from user for wanted alcohol pairing -->
-            <button class="green-btn" type="submit">✅ Submit</button>
-            <div><button class="hide newbtn" type="submit">🆕 Generate New Pairing</button></div>
-            <!-- hiding button for generating new pairing until user uses Sumbit at least once -->
-            <button class="hide savebtn" type="submit">💾 Save Your Pairing</button>
-            <!-- button to save pairing to list // also hides button until user Submits -->
+
+             <form id="search-food-drink"> <!-- form tag for input -->
+                <p>Choose your favorite type of cuisine and base alcohol to create a cocktail and dinner recipe to pair together</p>
+                <p class="input-title"><input class="input" type="text" placeholder="Cuisine: e.g., Italian, Russian, American"></p>
+                <!-- taking user input for what kind of cuisine is wanted -->
+                <p class="input-title"><input class="input" type="text" placeholder="Alcohol: e.g., Gin, Vodka, Whiskey"></p>
+                <!-- taking input from user for wanted alcohol pairing -->
+                <button class="green-btn" type="submit">✅ Submit</button>
+            </form>
+                <div><button class="hide newbtn" id="gen-new-pairing" type="submit">🆕 Generate New Pairing</button></div>
+                <!-- hiding button for generating new pairing until user uses Sumbit at least once -->
+                <button class="hide savebtn" id="save-pairing" type="submit">💾 Save Your Pairing</button>
+                <!-- button to save pairing to list // also hides button until user Submits -->
+             
         </div>
     
         <!-- separate div for list of ingredients for for food and drink to be shown after user selects choice -->
