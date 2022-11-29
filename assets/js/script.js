@@ -55,7 +55,7 @@ function getPairingFood(data) { //uses math.random to randomly retrieve a pairin
   console.log("Based on your nation selection of " + nationChoice + ", this is your food: " + data.meals[pairing].strMeal);
 }//end getPairing
 
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function(event) { //pressing the submit button will run the functions
   console.log("begin handleFormSubmit");
   event.preventDefault();
   nationChoice = nationInputElement.value;
@@ -64,6 +64,7 @@ var handleFormSubmit = function(event) {
   console.log(drinkChoice);
   fetchData(getNationChoice(nationChoice), getDrink(drinkChoice));
   console.log("handleFormSubmit complete")
+  
 }
 
 
@@ -93,7 +94,6 @@ fetch(base) //cocktail by drink choice api
   });
   console.log("fetchData complete")
 }
-
 var submit = document.getElementById("submit");
 
 submit.addEventListener("click", handleFormSubmit) 
