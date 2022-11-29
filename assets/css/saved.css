@@ -1,12 +1,15 @@
+/* links for HTML is pushed to right of page in nav bar */
 nav {
     text-align: right;
 }
 
+/* grabs any a tags from under the nav bar */
 nav > a {
     text-decoration: none;
     color: black;
 }
 
+/* change background for saved.html to a reverse image of main */
 body {
     background-image: url(../imgs/background-right.png);
     background-repeat: no-repeat;

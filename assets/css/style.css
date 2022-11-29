@@ -1,3 +1,4 @@
+/* universal colors */
 :root {
     --green: #A4C888; 
     --savebtn: #A4B2E3;
@@ -5,17 +6,20 @@
 
 }
 
+/* places links to other HTMLs to right side of nav bar */
 nav {
     text-align: right;
     margin-right: 20px;
 }
 
+/* grabs any a tags under the nav bar */
 nav > a {
     text-decoration: none;
     color: black;
     font-size: 17px;
 }
 
+/* change the background for main page and set it to cover and no repeat */
 body{
     background-image: url(../imgs/background-left.png);
     background-repeat: no-repeat;
@@ -23,18 +27,21 @@ body{
     margin-left: 58px;
 }
 
+/* setting button size and styling */
 button {
     width: 100%;
     border-radius: 15px;
     padding: 0;
 }
 
+/* user input text color styling */
 input[type = text] {
     background-color: #C7BEBE;
     width: 100%;
     font-weight: bolder;
 } 
 
+/* sizing and styling for images */
 img {
     height: auto;
     width: auto;
@@ -46,6 +53,7 @@ header {
     margin-bottom: 90px;
 }
 
+/* grabs submit button for styling */
 .green-btn {
     background-color: var(--green);  
     justify-content: center;  
@@ -53,13 +61,14 @@ header {
     font-weight: 800;
 }
 
-
+/* grabs save button for styling */
 .savebtn {
     background-color: var(--savebtn);
     font-size: 16px;
     font-weight: 800;
 }
 
+/* grabs new button for styling */
 .newbtn {
     background-color: var(--newbtn);
     font-size: 16px;
@@ -72,6 +81,7 @@ header {
 }
 
 
+/* setting for words in header */
 .wine .dine {
     font-family: 'Inter';
     font-style: normal;
@@ -79,6 +89,7 @@ header {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* separate styling for 'and' */
 .and {
     font-family: 'Inter';
     font-style: italic;
@@ -86,6 +97,7 @@ header {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* finderrz in separate div to push onto separate line */
 .finderz {
     font-family: 'Inter';
     font-style: italic;
@@ -95,6 +107,7 @@ header {
     margin-top: 10px;
 }
 
+/* aligns header in center */
 .title {
     text-align: center;
 }
@@ -103,6 +116,8 @@ header {
     display:none;
 } */
 
+
+/* hides the overflow from the main user input area */
 .main {
     overflow: hidden;
     width: 444px;
