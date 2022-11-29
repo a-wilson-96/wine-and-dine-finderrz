@@ -5,6 +5,17 @@
 
 }
 
+nav {
+    text-align: right;
+    margin-right: 20px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
 body{
     background-image: url(../imgs/background-left.png);
     background-repeat: no-repeat;
@@ -32,20 +43,27 @@ img {
 }
 
 header {
-    margin-bottom: 50px;
+    margin-bottom: 90px;
 }
 
 .green-btn {
     background-color: var(--green);  
     justify-content: center;  
+    font-size: 16px;
+    font-weight: 800;
 }
+
 
 .savebtn {
     background-color: var(--savebtn);
+    font-size: 16px;
+    font-weight: 800;
 }
 
 .newbtn {
     background-color: var(--newbtn);
+    font-size: 16px;
+    font-weight: 800;
 }
 
 
@@ -74,6 +92,7 @@ header {
     font-weight: 600;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-left: 200px;
+    margin-top: 10px;
 }
 
 .title {
