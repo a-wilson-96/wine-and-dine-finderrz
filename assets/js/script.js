@@ -56,7 +56,7 @@ function getPairingDrink(data) { //uses math.random to randomly retrieve a pairi
   image2.src = data.drinks[pairing].strDrinkThumb + "/preview"; //replaces images with user choice
   drinkTitle.textContent = data.drinks[pairing].strDrink; //displays drink title to h2 element
   drinks.push(data.drinks[pairing].idDrink);
-  localStorage.setItem('localdrink', drinks);
+  localStorage.setItem('localdrink', JSON.stringify(drinks));
   console.log(localStorage.getItem('localdrink'));
 }//end getPairing
 
