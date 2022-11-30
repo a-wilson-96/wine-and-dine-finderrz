@@ -23,6 +23,8 @@ var nationChoice = document.getElementById("nationInputElement");
 var drinkChoice = document.getElementById("baseInputElement");
 var image1 = document.querySelector('.image1');
 var image2 = document.querySelector('.image2');
+var foodTitle = document.getElementById('food-title');
+var drinkTitle = document.getElementById('drink-title');
 var queryURL;
 var userNationChoice;
 var userDrinkChoice;
@@ -49,7 +51,8 @@ function getPairingDrink(data) { //uses math.random to randomly retrieve a pairi
 
   var pairing = Math.floor(Math.random() * data.drinks.length);
   console.log("Based on your drink selection of " + drinkChoice + ", this is your drink: " + data.drinks[pairing].strDrink);
-  image2.src = data.drinks[pairing].strDrinkThumb + "/preview";
+  image2.src = data.drinks[pairing].strDrinkThumb + "/preview"; //replaces images with user choice
+  drinkTitle.textContent = data.drinks[pairing].strDrink; //displays drink title to h2 element
 }//end getPairing
 
 function getPairingFood(data) { //uses math.random to randomly retrieve a pairing based on the selected alcohol and nation
@@ -57,6 +60,7 @@ function getPairingFood(data) { //uses math.random to randomly retrieve a pairin
   var pairing = Math.floor(Math.random() * data.meals.length);
   console.log("Based on your nation selection of " + nationChoice + ", this is your food: " + data.meals[pairing].strMeal);
   image1.src = data.meals[pairing].strMealThumb + "/preview"; //replaces images with user choice
+  foodTitle.textContent = data.meals[pairing].strMeal; //displays food title to h2 element
 }//end getPairing
 
 
