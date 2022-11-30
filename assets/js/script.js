@@ -112,7 +112,18 @@ var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("save-pairing");
 
-var saveBtn = document.getElementById("savebtnn")
+ 
+
+document.querySelector('.hide-savebtn').style.display = 'none'; 
+document.querySelector('.green-btn').addEventListener('click', showBtn); 
+ 
+function showBtn(e) { 
+ document.querySelector('.hide-savebtn').style.display = 'block'; 
+ e.preventDefault(); 
+} 
+ 
+
+
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
