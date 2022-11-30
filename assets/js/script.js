@@ -28,8 +28,8 @@ var drinkTitle = document.getElementById('drink-title');
 var queryURL;
 var userNationChoice;
 var userDrinkChoice;
-var food;
-var drinks; 
+var food = [];
+var drinks = []; 
 
 var searchForm = document.querySelector('#search-food-drink');  
 
@@ -55,7 +55,7 @@ function getPairingDrink(data) { //uses math.random to randomly retrieve a pairi
   console.log("Based on your drink selection of " + drinkChoice + ", this is your drink: " + data.drinks[pairing].strDrink);
   image2.src = data.drinks[pairing].strDrinkThumb + "/preview"; //replaces images with user choice
   drinkTitle.textContent = data.drinks[pairing].strDrink; //displays drink title to h2 element
-  drinks = data.drinks[pairing].idDrink;
+  drinks.push(data.drinks[pairing].idDrink);
   localStorage.setItem('localdrink', drinks);
   console.log(localStorage.getItem('localdrink'));
 }//end getPairing
@@ -66,7 +66,7 @@ function getPairingFood(data) { //uses math.random to randomly retrieve a pairin
   console.log("Based on your nation selection of " + nationChoice + ", this is your food: " + data.meals[pairing].strMeal);
   image1.src = data.meals[pairing].strMealThumb + "/preview"; //replaces images with user choice
   foodTitle.textContent = data.meals[pairing].strMeal; //displays food title to h2 element
-  food =  data.meals[pairing].idMeal;
+  food.push(data.meals[pairing].idMeal);
   console.log(data.meals[pairing].idMeal);
   localStorage.setItem('localfood', food);
   console.log(localStorage.getItem('localfood')); 
