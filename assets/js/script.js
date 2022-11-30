@@ -26,6 +26,8 @@ var image2 = document.querySelector('.image2');
 var foodTitle = document.getElementById('food-title');
 var drinkTitle = document.getElementById('drink-title');
 var queryURL;
+var stagingNation = [];
+var stagingDrink = [];
 var userNationChoice;
 var userDrinkChoice;
 var food = [];
@@ -54,9 +56,8 @@ function getPairingDrink(data) { //uses math.random to randomly retrieve a pairi
   var pairing = Math.floor(Math.random() * data.drinks.length);
   console.log("Based on your drink selection of " + drinkChoice + ", this is your drink: " + data.drinks[pairing].strDrink);
   image2.src = data.drinks[pairing].strDrinkThumb + "/preview"; //replaces images with user choice
+  stagingDrink.push(data.drinks[pairing].strDrink);
   drinkTitle.textContent = data.drinks[pairing].strDrink; //displays drink title to h2 element
-  drinks.push(data.drinks[pairing].idDrink);
-  localStorage.setItem('localdrink', JSON.stringify(drinks));
   console.log(localStorage.getItem('localdrink'));
 }//end getPairing
 
@@ -65,10 +66,9 @@ function getPairingFood(data) { //uses math.random to randomly retrieve a pairin
   var pairing = Math.floor(Math.random() * data.meals.length);
   console.log("Based on your nation selection of " + nationChoice + ", this is your food: " + data.meals[pairing].strMeal);
   image1.src = data.meals[pairing].strMealThumb + "/preview"; //replaces images with user choice
+  stagingNation.push(data.meals[pairing].strMeal);
   foodTitle.textContent = data.meals[pairing].strMeal; //displays food title to h2 element
-  food.push(data.meals[pairing].idMeal);
   console.log(data.meals[pairing].idMeal);
-  localStorage.setItem('localfood', food);
   console.log(localStorage.getItem('localfood')); 
 }//end getPairing
 
@@ -149,6 +149,8 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
+  localStorage.setItem("savedFood", stagingNation);
+  localStorage.setItem("savedDrink", stagingDrink);
 }
 
 function show() {
