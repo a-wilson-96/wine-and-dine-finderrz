@@ -21,7 +21,7 @@ WHEN I search for a type of cuisine and a choice of alcohol
 THEN I am presented with a pairing of a cocktail and dinner idea
 WHEN I view the dinner and cocktail ideas 
 THEN I am presented with the name of a cuisine and the name of cocktail 
-WHEN I save the pairing information
+WHEN I save the pairing 
 THEN I have the option to view at a later time for future ideas 
 WHEN I have seen my previous pairings of a dinner and cocktail
 THEN I am able to generate a new pairing to be able to have different alternatives
@@ -29,16 +29,19 @@ THEN I am able to generate a new pairing to be able to have different alternativ
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+1. Choose your favorite type of cuisine and alcohol
+2. Input them into proper input fields
+3. Click "Submit"
+4. If you want to save the pairing, click "Save Your Pairing"
+5. To review saved pairings, click "Saved Pairings" on the navigation bar and it will direct you to a list of previous pairings
 
+![Homepage](/assets/imgs/screenshot.png)
 
-    ```md
-    ![alt text](/assets/imgs/)
-    ```
 
 ## Credits
 
 Contributors:
+
     Aaron Wilson
         https://github.com/a-wilson-96
     Amanda Pietsch
@@ -51,6 +54,7 @@ Contributors:
         https://github.com/talexander91
 
 Web-API's Used: 
+
     Cocktails: https://www.thecocktaildb.com/api.php
     Meals: https://www.themealdb.com/api.php
 
@@ -58,6 +62,6 @@ Web-API's Used:
 
 GitHub: https://github.com/a-wilson-96/wine-and-dine-finderrz
 
-Deployed Page: 
+Deployed Page: https://a-wilson-96.github.io/wine-and-dine-finderrz/
 
 
