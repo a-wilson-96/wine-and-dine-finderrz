@@ -63,7 +63,7 @@ header {
 }
 
 /* grabs save button for styling */
-.savebtn {
+.hide-savebtn {
     background-color: var(--savebtn);
     font-size: 16px;
     font-weight: 800;
@@ -115,7 +115,7 @@ header {
 }
 
 .hide {
-    display:none;
+    display: none;
 }
 
 
