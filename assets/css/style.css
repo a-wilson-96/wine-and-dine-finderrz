@@ -47,13 +47,36 @@ img {
     width: auto;
     max-width: 350px;
     max-height: 350px;
-    border-radius: 15px ;
+    border-radius: 15px;
 }
 
 header {
     margin-bottom: 90px;
 }
 
+#food-title {
+    font-size: 30px; 
+    font-family: 'Inter' sans-serif;
+    font-style: italic;
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    inline-size: 300px;
+    overflow-wrap: break-word
+}
+
+#drink-title {
+    font-size: 30px;
+    font-family: 'Inter' sans-serif;
+    font-style: italic; 
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    inline-size: 300px;
+    overflow-wrap: break-word
+}
 /* grabs submit button for styling */
 .green-btn {
     background-color: var(--green);  
@@ -120,11 +143,12 @@ header {
 
 
 /* hides the overflow from the main user input area */
-.main {
+.main { 
     overflow: hidden;
     width: 444px;
     padding-left: 20px;
 }
+
 
 /* The Modal (background) */
 .modal {
