@@ -1,84 +1,27 @@
 //  www.themealdb.com/api/json/v1/1/lookup.php?i=
-var list = document.getElementById('saved-food')
-var savedFood = localStorage.getItem('localfood');
-var savedDrink = localStorage.getItem('localdrink');
-// var idLink = "www.themealdb.com/api/json/v1/1/lookup.php?i=";
-// var didLink = "www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
-// var li = document.createElement('li');
-// var arr = [];
-// var darr = [];
+var flist = document.getElementById('saved-food');
+var dlist = document.getElementById('saved-drinks');
+var savedFood = localStorage.getItem('savedFood');
+var savedDrink = localStorage.getItem('savedDrink');
+
+var foodArr = savedFood.split(',');
+var drinkArr = savedDrink.split(',');
+console.log(foodArr);
+console.log(drinkArr);
+
+for(i=0; i < foodArr.length; i++) {
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(foodArr[i]));
+    flist.appendChild(li);
+}
+
+for(i=0; i < drinkArr.length; i++) {
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(drinkArr[i]));
+    dlist.appendChild(li);
+}
+
 
 
 // console.log(savedFood.length);
-// console.log(savedFood);
-// // console.log(savedFood.lastIndexOf)
-
-// // turns localstorage string into arrays of int
-// arr = savedFood.split(',').map(element => {
-//   return Number(element);
-// });
-
-// // console.log(arr);
-// var flink;
-// for (i=0; i < arr.length; i++) {
-//   flink = idLink + arr[i];
-//   fetch(flink)
-//   .then(function (res) {
-//     return res.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//   })
-//   .catch(function(err) {
-//     return(err);
-//   });
-// }
-
-// console.log(savedDrink);
-// darr = savedDrink.split(',').split.map(element => {
-//   return Number(element);
-// });
-
-// var dlink;
-// for (i=0; i < darr.length; i++) {
-//   dlink = didLink +darr[i];
-//   console.log(dlink);
-// }
-
-
-
-// for(i=0; i<savedFood.length; i++) {
-//     // list.appendChild(document.createElement("li"));
-//     li.append(idLink + savedFood[i]);
-//     list.appendChild(li);
-// }
-
-
-
-
-// fetch(nation) //food by nation api
-// .then(function (res) {
-//   return res.json();
-// })
-// .then(function (data) {
-//   console.log(data);
-//   if(data.meals == null) {
-//     console.log("Error: incorrect meal input");
-//   }else {
-//    console.log(data);
-//   }
-// })
-// .catch(function(err) {
-//   return(err);
-// });
-
-// fetch(base) //cocktail by drink choice api
-//   .then(function (res) {
-//     return res.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//   })
-//   .catch(function (err) {
-//     return (err);
-//   });
+// console.log(savedDrink.length);

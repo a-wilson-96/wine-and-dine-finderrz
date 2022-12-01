@@ -15,5 +15,36 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 58px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+p {
+    text-align: center;
+    font-size: 23px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:red;
+}
+
+#saved-food {
+    background-color: rgb(161, 207, 88);
+    padding: 20px;
+}
+
+#saved-drinks {
+    background-color: aqua;
+    padding: 20px;
+}
+
+#saved-food > li {
+    /* background-color: white; */
+    list-style-type: upper-roman;
+    /* margin: 5px; */
+    text-align: center;
+}
+
+#saved-drinks > li {
+    /* background-color: white; */
+    list-style-type:upper-roman;
+    text-align: center;
 }
 
