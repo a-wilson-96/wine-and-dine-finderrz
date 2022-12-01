@@ -15,6 +15,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 58px;
+    font-family: 'Permanent Marker', cursive;
 }
 
 p {
@@ -35,13 +36,15 @@ p {
 }
 
 #saved-food > li {
-    background-color: white;
-    list-style-position: outside;
+    /* background-color: white; */
+    list-style-type: upper-roman;
     /* margin: 5px; */
+    text-align: center;
 }
 
 #saved-drinks > li {
-    background-color: white;
-    list-style-position: outside;
+    /* background-color: white; */
+    list-style-type:upper-roman;
+    text-align: center;
 }
 
