@@ -56,9 +56,9 @@ function getPairingDrink(data) { //uses math.random to randomly retrieve a pairi
   var pairing = Math.floor(Math.random() * data.drinks.length);
   console.log("Based on your drink selection of " + drinkChoice + ", this is your drink: " + data.drinks[pairing].strDrink);
   image2.src = data.drinks[pairing].strDrinkThumb + "/preview"; //replaces images with user choice
-  stagingDrink.push(data.drinks[pairing].strDrink);
+  // stagingDrink.push(data.drinks[pairing].strDrink);
   drinkTitle.textContent = data.drinks[pairing].strDrink; //displays drink title to h2 element
-  console.log(localStorage.getItem('localdrink'));
+  // console.log(localStorage.getItem('localdrink'));
 }//end getPairing
 
 function getPairingFood(data) { //uses math.random to randomly retrieve a pairing based on the selected alcohol and nation
@@ -66,10 +66,10 @@ function getPairingFood(data) { //uses math.random to randomly retrieve a pairin
   var pairing = Math.floor(Math.random() * data.meals.length);
   console.log("Based on your nation selection of " + nationChoice + ", this is your food: " + data.meals[pairing].strMeal);
   image1.src = data.meals[pairing].strMealThumb + "/preview"; //replaces images with user choice
-  stagingNation.push(data.meals[pairing].strMeal);
+  // stagingNation.push(data.meals[pairing].strMeal);
   foodTitle.textContent = data.meals[pairing].strMeal; //displays food title to h2 element
-  console.log(data.meals[pairing].idMeal);
-  console.log(localStorage.getItem('localfood')); 
+  // console.log(data.meals[pairing].idMeal);
+  // console.log(localStorage.getItem('localfood')); 
 }//end getPairing
 
 
@@ -149,8 +149,10 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
-  localStorage.setItem("savedFood", stagingNation);
-  localStorage.setItem("savedDrink", stagingDrink);
+  food.push(foodTitle.textContent);
+  drinks.push(drinkTitle.textContent);
+  localStorage.setItem("savedFood", food);
+  localStorage.setItem("savedDrink", drinks);
 }
 
 function show() {

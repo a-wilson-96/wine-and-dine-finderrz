@@ -17,3 +17,31 @@ body {
     margin-left: 58px;
 }
 
+p {
+    text-align: center;
+    font-size: 23px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:red;
+}
+
+#saved-food {
+    background-color: rgb(161, 207, 88);
+    padding: 20px;
+}
+
+#saved-drinks {
+    background-color: aqua;
+    padding: 20px;
+}
+
+#saved-food > li {
+    background-color: white;
+    list-style-position: outside;
+    /* margin: 5px; */
+}
+
+#saved-drinks > li {
+    background-color: white;
+    list-style-position: outside;
+}
+
