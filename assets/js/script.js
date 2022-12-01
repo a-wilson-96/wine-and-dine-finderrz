@@ -25,6 +25,7 @@ var image1 = document.querySelector('.image1');
 var image2 = document.querySelector('.image2');
 var foodTitle = document.getElementById('food-title');
 var drinkTitle = document.getElementById('drink-title');
+var errorMsg = document.getElementById("error-msg");
 var queryURL;
 var stagingNation = [];
 var stagingDrink = [];
@@ -138,7 +139,13 @@ document.querySelector('.green-btn').addEventListener('click', showBtn);
 
 // function for button to show when clicking on submit button  
 function showBtn(e) { 
- document.querySelector('.hide-savebtn').style.display = 'block'; 
+  if (!nationChoice || !drinkChoice) {
+    errorMsg.textContent = "Error. Please enter a valid parameter in each box in order to save."
+  } else {
+    document.querySelector('.hide-savebtn').style.display = 'block'; 
+    errorMsg.textContent = "";
+  }
+ 
  e.preventDefault(); 
 } 
  
